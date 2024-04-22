@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign In | Mediakaf's Concepts</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/sign-in.css">
+</head>
+<body>
+
+	<!-- Sign In -->
+	<div class="container">
+		<form class="form">
+			<div class="form-header">
+			<img class="form-logo" src="./assets/img/bootstrap-logo.svg" width="60">
+			<h1 class="form-title">Please sign in</h1>
+		</div>
+			<div class="form-group">
+				<label for="email" class="lb_email">Email Address</label>
+				<input type="email" name="email" class="form-control" id="email" autocomplete="none">
+				<label for="password" class="lb_password">Password</label>
+				<input type="password" name="password" class="form-control" id="password">
+				<div class="box">
+					<input type="checkbox" name="checkbox" id="checkbox">
+					<label for="checkbox">Remember me</label>
+				</div>
+				<input class="form-control" type="submit" value="Sign in">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		const EmailLabel = document.querySelector('.lb_email');
+		const PasswordLabel = document.querySelector('.lb_password');
+		const EmailInput = document.querySelector('#email');
+		const PasswordInput = document.querySelector('#password');
+		// Adding EventListener
+		EmailInput.onclick = function () {
+			EmailLabel.style.top = '15px';
+			EmailLabel.style.fontSize = '15px';
+			EmailLabel.style.color = '#9c9c9c';
+		}
+		PasswordInput.onclick = function () {
+			PasswordLabel.style.top = '15px';
+			PasswordLabel.style.fontSize = '15px';
+			PasswordLabel.style.color = '#9c9c9c';
+		}
+	</script>
+</body>
+</html>
